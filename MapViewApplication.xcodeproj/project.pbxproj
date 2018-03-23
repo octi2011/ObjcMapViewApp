@@ -13,6 +13,8 @@
 		DE66818A2065222B00A32908 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6681892065222B00A32908 /* Assets.xcassets */; };
 		DE66818D2065222B00A32908 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE66818B2065222B00A32908 /* LaunchScreen.storyboard */; };
 		DE6681902065222B00A32908 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE66818F2065222B00A32908 /* main.m */; };
+		DE6681982065239200A32908 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6681972065239200A32908 /* MapKit.framework */; };
+		DE66819B2065249400A32908 /* MapPin.m in Sources */ = {isa = PBXBuildFile; fileRef = DE66819A2065249400A32908 /* MapPin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		DE66818C2065222B00A32908 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE66818E2065222B00A32908 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE66818F2065222B00A32908 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DE6681972065239200A32908 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DE6681992065249400A32908 /* MapPin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapPin.h; sourceTree = "<group>"; };
+		DE66819A2065249400A32908 /* MapPin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapPin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE6681982065239200A32908 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +50,7 @@
 			children = (
 				DE66817F2065222B00A32908 /* MapViewApplication */,
 				DE66817E2065222B00A32908 /* Products */,
+				DE6681962065239200A32908 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,8 +74,18 @@
 				DE66818B2065222B00A32908 /* LaunchScreen.storyboard */,
 				DE66818E2065222B00A32908 /* Info.plist */,
 				DE66818F2065222B00A32908 /* main.m */,
+				DE6681992065249400A32908 /* MapPin.h */,
+				DE66819A2065249400A32908 /* MapPin.m */,
 			);
 			path = MapViewApplication;
+			sourceTree = "<group>";
+		};
+		DE6681962065239200A32908 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE6681972065239200A32908 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +120,11 @@
 					DE66817C2065222B00A32908 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -142,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE66819B2065249400A32908 /* MapPin.m in Sources */,
 				DE6681852065222B00A32908 /* ViewController.m in Sources */,
 				DE6681902065222B00A32908 /* main.m in Sources */,
 				DE6681822065222B00A32908 /* AppDelegate.m in Sources */,
